@@ -1,13 +1,24 @@
 <script>
 	import Logo from '../assets/icons/logoLarge.svelte';
 	import ShortenIcon from '../assets/icons/shortenIcon.svelte';
-</script>
+	
+	
+	// Creating a redirecting function that redirects us to share page on clicking the generate button
+	const redirector = () => {
+		let lml = document.querySelector("lmz")
+		location.href= "./share"		
+	}
+	//////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	
+	</script>
 
 <article>
 	<svelte:component this={Logo} />
 	<div class="inputs">
-		<input type="url" class="inputbox" placeholder="Input your long URL" />
-		<button><svelte:component this={ShortenIcon} /><span>Shorten</span></button>
+		<input type="text" class="inputbox" placeholder="Input your long URL" />
+		<button on:click={redirector} class="lmz" ><svelte:component this={ShortenIcon} /><span>Shorten</span></button>
 	</div>
 </article>
 
