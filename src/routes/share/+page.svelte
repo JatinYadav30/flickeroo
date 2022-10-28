@@ -10,19 +10,17 @@
 	import { slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import * as eases from 'svelte/easing';
-	import QrValue from '../../routes/+page.svelte'
+	
 
 	let showing = true;
 	let currentEasing = eases.elasticOut;
 	let duration = 1000;
 
 	let isCopyShowing = true;
-	/*
+	
 	let url = 'https://fli.ck/shortURL';
 
 
-	qmz.this = dimz
-	*/
 
 
 
@@ -35,7 +33,7 @@
 	<!-- Content -->
 	<div class="content">
 		<div class="box">
-			<svelte:component this={Qrcode} / >
+			<svelte:component this={Qrcode} />
 
 			<div class="boxtext">
 				<h4 class="title">Here’s your short URL!</h4>
